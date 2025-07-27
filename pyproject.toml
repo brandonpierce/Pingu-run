@@ -1,0 +1,56 @@
+[project]
+name = "pingu-run"
+version = "0.1.0"
+description = "A 2D platformer game where players control a penguin character navigating through various levels filled with obstacles, enemies, and collectibles"
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "MIT" }
+authors = [
+    { name = "Pingu Run Contributors" }
+]
+keywords = ["game", "platformer", "pygame", "penguin"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: End Users/Desktop",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Games/Entertainment :: Arcade",
+]
+
+dependencies = [
+    "pygame>=2.5.0",
+]
+
+[project.urls]
+Homepage = "https://github.com/your-username/Pingu-run-fork"
+Repository = "https://github.com/your-username/Pingu-run-fork"
+Issues = "https://github.com/your-username/Pingu-run-fork/issues"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+include = [
+    "*.py",
+    "images/",
+    "levelsFunc/",
+    "levelsFuncCB/", 
+    "levelsFuncSB/",
+    "levelsP/",
+    "menusP/",
+    "partidasP/",
+    "spritesP/",
+]
+
+[tool.uv]
+dev-dependencies = [
+    "pytest>=7.0.0",
+    "black>=22.0.0",
+    "isort>=5.0.0",
+    "flake8>=4.0.0",
+]
